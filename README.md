@@ -13,22 +13,20 @@ Este projeto faz parte do curso **DevQuest**, servindo como um teste técnico pa
 - **Detalhes do Pokemon:** Cada pokemon na lista é clicável e redireciona para uma página de detalhes com informações completas.
 - **Alternância de Tema:** Botão para alternar entre tema claro e escuro utilizando Context API.
 - **Filtro por Tipo:** Campo de filtro para listar pokemons de um tipo específico.
-- **Teste Unitários:** Implementação de testes utilizando Jest.
 
 ## Ferramentas Utilizadas
 
 - **React.js:** Para construção da SPA.
 - **Context API:** Para gerenciamento de estado global do tema.
-- **styled-components:** Para estilização dos componentes com suporte a temas.
-- **react-router-dom:** Para navegação entre as páginas.
-- **Jest:** Para testes unitários.
+- **Styled-components:** Para estilização dos componentes com suporte a temas.
+- **React-router-dom:** Para navegação entre as páginas.
 
 ## Decisões Técnicas
 
 - **SPA:** Utilização de uma aplicação de página única para melhorar a experiência do usuário com transições suaves entre páginas.
 - **Context API:** Escolhido para gerenciamento de temas devido à sua simplicidade e facilidade de integração com React.
-- **styled-components:** Escolhido para permitir estilos dinâmicos e tema adaptável.
-- **react-router-dom:** Escolhido pela facilidade de uso e integração com React para navegação.
+- **Styled-components:** Escolhido para permitir estilos dinâmicos e tema adaptável.
+- **React-router-dom:** Escolhido pela facilidade de uso e integração com React para navegação.
 
 ## Instalação e Uso
 
@@ -70,10 +68,3 @@ Siga os passos abaixo para rodar o projeto localmente:
 - **pages/**: Contém as páginas da aplicação.
 - **styles/**: Contém temas e estilos globais.
 - **context/**: Contém o contexto da aplicação.
-
-## Testes
-
-Para rodar os testes, use o comando:
-
-```sh
-npm test
