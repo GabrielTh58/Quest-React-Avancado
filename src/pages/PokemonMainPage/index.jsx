@@ -10,6 +10,7 @@ import {
     PokemonList,
     PokemonId,
     PokemonName,
+    ButtonContainer,
     LoadMorePokemonButton
 } from './styles';
 import { SelectedPokeInfoContext } from '../../contexts/SelectedPokeInfo';
@@ -76,20 +77,19 @@ export const PokemonMainPage = () => {
     return (
         <PageContainer theme={theme}>
             <Menu />
-
-            <Filter>
-                <div>
-                    <span>Filter by type: </span>
-                    <select name="Filter by type" onChange={handleFilterChange} value={filter}>
-                        <option value="all">all</option>
-                        {types.map((type) => (
-                            <option key={type} value={type}>{type}</option>
-                        ))}
-                    </select>
-                </div>
-            </Filter>
-
+            
             <ContentContainer>
+                <Filter>
+                    <div>
+                        <span>Filter: </span>
+                        <select name="Filter by type" onChange={handleFilterChange} value={filter}>
+                            <option value="all">all</option>
+                            {types.map((type) => (
+                                <option key={type} value={type}>{type}</option>
+                            ))}
+                        </select>
+                    </div>
+                </Filter>
                 <PokemonListContainer>
                     <div>
                         <ul>
@@ -112,10 +112,12 @@ export const PokemonMainPage = () => {
                         </ul>
                     </div>
 
-                    <LoadMorePokemonButton onClick={loadMorePokemons}>
-                        Carregar mais
-                        <img src="../../src/assets/pokebola-icon.png" alt="Pokebola Icon" />
-                    </LoadMorePokemonButton>
+                    <ButtonContainer>
+                        <LoadMorePokemonButton onClick={loadMorePokemons}>
+                            Carregar mais
+                            <img src="../../src/assets/pokebola-icon.png" alt="Pokebola Icon" />
+                        </LoadMorePokemonButton>
+                    </ButtonContainer>
                 </PokemonListContainer>
             </ContentContainer>
         </PageContainer>

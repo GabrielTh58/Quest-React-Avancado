@@ -14,21 +14,17 @@ export const MenuContainer = styled.header`
     padding: 30px 30px;
     width: 100vw;
     background-color: #721919;   
-    height: 145px;
+    height: 120px;
 
     img:first-child{
-        width: 375px;
+        max-width: 320px;
 
         @media(max-width: 800px){
+            max-width: 220px;
+        }
+
+        @media (max-width: 600px) {
             max-width: 180px;
-        }
-
-        @media (max-width: 800px) {
-            max-width: 120px;
-        }
-
-        @media (max-width: 400px) {
-            max-width: 80px;
         }
     }
 
@@ -75,5 +71,13 @@ export const LogoContainer = styled.div`
 export const PokeballContainer = styled.div`
     width: fit-content;
     position: absolute;
-    top: 50px;
+    top: 40px;
+
+    @media (max-width: 800px) {
+        top: 65px;
+    }
+    
+    @media (max-width: 600px) {
+        top: 75px;
+    }
 `

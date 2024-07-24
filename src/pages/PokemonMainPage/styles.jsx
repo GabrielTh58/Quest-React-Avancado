@@ -19,14 +19,23 @@ const buttonAnimation = keyframes`
   }
 `
 
-export const Filter = styled.div`
-    width: 1440px;
-    margin: 0 auto;
-    text-align: start;
-    padding-top: 30px;
-
+export const Filter = styled.div`   
     div{
-        padding-left: 20px;
+
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 30px;
+  
+        
+        @media(max-width: 1220px){
+            padding: 15px 30px;
+        }
+
+        
+        @media(max-width: 800px){
+            padding-top: 40px ;
+            padding-bottom: 40px ;
+        }
     }
 
     span{
@@ -38,8 +47,8 @@ export const Filter = styled.div`
             -webkit-appearance: none;
             -moz-appearance: none;
             outline: none;
-            width: 200px;
-            padding: 10px;
+            max-width: 150px;
+            padding: 5px 10px;
             font-size: 15px;
             color: #333;
             background-color: #fff;
@@ -61,7 +70,6 @@ export const Filter = styled.div`
         select:focus {
             border-color: #721919;
         }      
-    
 `;
 
 export const PageContainer = styled.div`
@@ -81,13 +89,12 @@ export const ContentContainer = styled.div`
 export const PokemonListContainer = styled.div`
     max-width: 1440px;
     margin: 0 auto;   
-    padding-top: 50px;
 
     ul{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         grid-auto-rows: 1fr;
-        gap: 20px;
+        gap: 15px;
         text-transform: capitalize;
         place-items: center
     }
@@ -134,11 +141,17 @@ export const PokemonName = styled.h2`
     font-weight: 700;
 `
 
+export const ButtonContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
 export const LoadMorePokemonButton = styled.button`
     display: flex;
     align-items: center;
     margin: 50px 0;
-    margin-inline: auto;
     padding: 15px 30px;
     border: none;
     border-radius: 15px;
@@ -148,6 +161,10 @@ export const LoadMorePokemonButton = styled.button`
     box-shadow: 0 3px 15px rgba(100,100,100,0.5);
     transition: 0.3s ease-in-out;
     animation: ${buttonAnimation} 0.8s ease-in-out infinite alternate;
+    
+    @media(max-width: 1250px){
+        margin: 50px 0;
+    }
 
     &:hover{
         opacity: 1;
@@ -163,6 +180,7 @@ export const LoadMorePokemonButton = styled.button`
         height: 25px;
         margin-left: 5px;
     }
+
 `
 
 export const ImageContainer = styled.div`
