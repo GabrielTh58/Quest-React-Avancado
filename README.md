@@ -35,13 +35,13 @@ Siga os passos abaixo para rodar o projeto localmente:
 1. Clone o repositório:
 
     ```sh
-    git clone https://github.com/seu-usuario/pokemon-pokedex.git
+    git clone https://github.com/GabrielTh58/.git
     ```
 
 2. Navegue até o diretório do projeto:
 
     ```sh
-    cd pokemon-pokedex
+    cd Quest-React-Avancado
     ```
 
 3. Instale as dependências:
